@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+ .page-header
+  h2= title
+ h3 Client Name : #{client.name}
+ .col-md-6
+  form(role='form')#formUpdateClient(action='/clients/#{client._id}/edit_client',method='post',name='updateclient',enctype='application/x-www-form-urlencoded')
+    .form-group
+     p Name
+      input#inputName.form-control(type="text", value="#{client.name}", name="name")
+     p Email:
+      input#inputEmail.form-control(type="text", value="#{client.email}", name="email")
+     p Phone:
+      input#inputPhone.form-control(type="number", value = "#{client.phone}", name="phone")
+     p
+      input(type='hidden',value='PUT',name='_method')
+     p
+      button.btn.btn-primary(type="submit") Update

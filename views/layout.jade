@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    title= title
+
+    // Style sheets
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    
+    //Include Bootstrap JS and Jquery
+    script(src='//code.jquery.com/jquery-1.11.3.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+    
+   
+   body
+   div.container-fluid
+    header.row
+      div.col-md-2
+      div.col-md-8
+        ul.nav.nav-pills
+          li 
+            a(href="/") Home
+          li 
+            a(href="/about") About
+          li
+            a(href="/clients") Clients
+          li
+            a(href="/new_client") Add New Client
+      div.col-md-2
+    section.row
+      div.col-md-2.well
+         h3 Sidebar
+         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sagittis orci laoreet, consectetur urna et, venenatis arcu. Fusce dignissim ut lacus in dapibus. Praesent vitae ultrices libero.
+      div.col-md-8
+        block content
+      div.col-md-2 
+    div.row.navbar-fixed-bottom
+      div.col-md-2.container
+        p &copy; Anuradha Wickramasooriya

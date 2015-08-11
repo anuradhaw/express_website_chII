@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+ .page-header
+  h2= title
+ h4 Client Details of #{client.name}
+ .page-header
+  p Name : #{client.name}
+  p Email : #{client.email}
+  p Phone : #{client.phone}
+ a.btn.btn-primary(href='/clients', role='button') Back to Client List
+

@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+ .page-header
+  h2= title
+ h5 Here you can view our existing clients, delete clients and update their details.
+ h3 Client List
+ p Client Name
+  table.table-striped
+   -each client, i in clients
+    tr
+     th
+      = client.name
+     th
+      a(href='/clients/#{client.id}') View / 
+       a(href='clients/#{client.id}/edit_client') Update 
+     th
+      form(action='/clients/#{client._id}/edit_client',method='post',enctype='application/x-www-form-urlencoded')
+         input(type='hidden',value='DELETE',name='_method')
+         button.btn.btn-primary(type='submit').
+                   Delete

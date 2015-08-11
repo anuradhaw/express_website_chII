@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  .page-header
+   h2= title
+   p Enter details of a new client to be added to the database
+  .col-md-6
+    form(role='form')#formAddClient(name="addclient",method="post",action="/clients")
+    .form-group
+     p Name
+      input#inputName.form-control(type="text",name="name")
+     p Email:
+      input#inputEmail.form-control(type="text", name="email")
+     p Phone:
+      input#inputPhone.form-control(type="number", name="phone")
+     p
+      button.btn.btn-primary(type="submit") submit
