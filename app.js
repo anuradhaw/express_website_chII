@@ -8,7 +8,8 @@ var bodyParser = require('body-parser');
 
 /* Add & connect to mongoDB database */
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/express_website_chII');
+//mongoose.connect('mongodb://localhost/express_website_chII');
+mongoose.connect('mongodb:https://github.com/anuradhaw/express_website_chII');
 
 var db = require('./model/db');
 var client = require('./model/clients');
@@ -30,11 +31,8 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-
-
 
 app.use('/', routes);
 app.use('/', clients);
