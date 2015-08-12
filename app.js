@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 /* Add & connect to mongoDB database */
 var mongoose = require('mongoose');
 //mongoose.connect('mongodb://localhost/express_website_chII');
-mongoose.connect('mongodb://https://github.com/anuradhaw/express_website_chII');
+mongoose.connect('mongodb://anuradhaw:Muthu@84@host:https://github.com/anuradhaw/express_website_chII/model');
 
 var db = require('./model/db');
 var client = require('./model/clients');
